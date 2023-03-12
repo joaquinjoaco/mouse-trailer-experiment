@@ -1,0 +1,82 @@
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+#blob {
+  height: 30vmax;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  translate: -35% -35%;
+  border-radius: 50%;
+  background: #c44d6a;
+  animation: rotate 18s infinite;
+  opacity: 0.8;
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+#blob2 {
+  height: 30vmax;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 10%;
+  top: 10%;
+  translate: -65% -65%;
+  border-radius: 50%;
+  background: #434fbb;
+  animation: rotate2 18s infinite;
+  opacity: 0.8;
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backdrop-filter: blur(6vmax);
+  z-index: 2;
+}
+
+@media screen and (max-width: 1439px) {
+  #blob {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -35% -35%;
+    scale: 1.8;
+  }
+  #blob2 {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -65% -65%;
+    scale: 1.8;
+  }
+}
